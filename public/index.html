@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PinBoard: open internships</title>
+  <meta name="description" content="Browse open internships and apply in two minutes.">
+  <meta name="theme-color" content="#0b5f6b">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip" href="#results">Skip to listings</a>
+
+  <header class="masthead">
+    <div class="wrap">
+      <p class="brand">PinBoard</p>
+      <h1>Open positions, pinned until their deadline.</h1>
+      <p class="lede">Search by role, company or skill. Every listing shows what it pays and when it closes.</p>
+
+      <form id="filters" class="filters" role="search" novalidate>
+        <label class="field grow">
+          <span>Search</span>
+          <input id="f-q" name="q" type="search" maxlength="80" placeholder="e.g. SQL, design, Sprout" autocomplete="off">
+        </label>
+        <label class="field">
+          <span>Work mode</span>
+          <select id="f-type" name="type">
+            <option value="">Any</option>
+            <option value="remote">Remote</option>
+            <option value="hybrid">Hybrid</option>
+            <option value="onsite">On-site</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Location</span>
+          <input id="f-location" name="location" type="text" maxlength="60" placeholder="e.g. Chennai" autocomplete="off">
+        </label>
+        <button id="clear" type="button" class="btn btn-quiet">Clear</button>
+      </form>
+    </div>
+  </header>
+
+  <noscript><p class="wrap noscript">PinBoard needs JavaScript to load listings. Please enable it and reload.</p></noscript>
+
+  <main class="wrap" id="results" tabindex="-1">
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <!-- Loading state -->
+    <div id="loading" class="grid" hidden aria-hidden="true">
+      <div class="card skeleton"></div><div class="card skeleton"></div><div class="card skeleton"></div>
+    </div>
+
+    <!-- Failure state -->
+    <section id="error" class="panel panel-error" hidden role="alert">
+      <h2>We couldn’t load the listings</h2>
+      <p id="error-message"></p>
+      <button id="retry" type="button" class="btn">Try again</button>
+    </section>
+
+    <!-- Empty state -->
+    <section id="empty" class="panel" hidden>
+      <h2>No internships match those filters</h2>
+      <p>Try a shorter search, or clear the filters to see everything.</p>
+      <button id="empty-clear" type="button" class="btn btn-quiet">Clear filters</button>
+    </section>
+
+    <!-- Ready state -->
+    <div id="grid" class="grid" hidden></div>
+    <nav id="pager" class="pager" aria-label="Pagination" hidden>
+      <button id="prev" type="button" class="btn btn-quiet">Previous</button>
+      <span id="page-info"></span>
+      <button id="next" type="button" class="btn btn-quiet">Next</button>
+    </nav>
+  </main>
+
+  <footer class="wrap foot">
+    <p>PinBoard uses demo listings. Applications are stored only to demonstrate the flow.
+      <a href="/api/ready">Service status</a></p>
+  </footer>
+
+  <dialog id="apply-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <div>
+        <h2 id="dialog-title">Apply</h2>
+        <p id="dialog-sub" class="muted"></p>
+      </div>
+      <button id="dialog-close" type="button" class="btn btn-quiet" aria-label="Close dialog">Close</button>
+    </div>
+
+    <form id="apply-form" novalidate>
+      <div id="form-banner" class="banner" role="alert" hidden></div>
+
+      <div class="field">
+        <label for="a-fullName">Full name</label>
+        <input id="a-fullName" name="fullName" type="text" autocomplete="name" maxlength="80" required aria-describedby="err-fullName">
+        <p class="err" id="err-fullName"></p>
+      </div>
+
+      <div class="field">
+        <label for="a-email">Email</label>
+        <input id="a-email" name="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="err-email">
+        <p class="err" id="err-email"></p>
+      </div>
+
+      <div class="field">
+        <label for="a-school">School or college <span class="muted">(optional)</span></label>
+        <input id="a-school" name="school" type="text" maxlength="100" aria-describedby="err-school">
+        <p class="err" id="err-school"></p>
+      </div>
+
+      <div class="field">
+        <label for="a-coverNote">Why this role?</label>
+        <textarea id="a-coverNote" name="coverNote" rows="5" maxlength="1000" required aria-describedby="err-coverNote count"></textarea>
+        <p class="err" id="err-coverNote"></p>
+        <p class="muted small" id="count">0 / 1000</p>
+      </div>
+
+      <div class="field check">
+        <input id="a-consent" name="consent" type="checkbox" aria-describedby="err-consent">
+        <label for="a-consent">I agree that this company may contact me about this application.</label>
+        <p class="err" id="err-consent"></p>
+      </div>
+
+      <div class="actions">
+        <button id="submit" type="submit" class="btn">Send application</button>
+        <button id="cancel" type="button" class="btn btn-quiet">Cancel</button>
+      </div>
+    </form>
+
+    <section id="success" class="success" hidden>
+      <h3>Application sent</h3>
+      <p id="success-message"></p>
+      <button id="success-close" type="button" class="btn">Done</button>
+    </section>
+  </dialog>
+
+  <script src="/validation.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+[
+  { "name": "valid application", "input": {}, "invalid": [] },
+  { "name": "name too short", "input": { "fullName": "A" }, "invalid": ["fullName"] },
+  { "name": "name with digits and symbols", "input": { "fullName": "R2-D2; DROP" }, "invalid": ["fullName"] },
+  { "name": "accented name is fine", "input": { "fullName": "José Ñandú" }, "invalid": [] },
+  { "name": "email missing @", "input": { "email": "asha.example.com" }, "invalid": ["email"] },
+  { "name": "email with spaces", "input": { "email": "a b@example.com" }, "invalid": ["email"] },
+  { "name": "empty email", "input": { "email": "" }, "invalid": ["email"] },
+  { "name": "school optional and empty", "input": { "school": "" }, "invalid": [] },
+  { "name": "school too long", "input": { "school": "x" }, "invalid": [], "schoolLength": 101, "expectInvalid": ["school"] },
+  { "name": "cover note too short", "input": { "coverNote": "Hire me" }, "invalid": ["coverNote"] },
+  { "name": "cover note too long", "input": {}, "coverNoteLength": 1001, "invalid": ["coverNote"] },
+  { "name": "consent not given", "input": { "consent": false }, "invalid": ["consent"] },
+  { "name": "consent as string is rejected", "input": { "consent": "true" }, "invalid": ["consent"] },
+  { "name": "internship id not an integer", "input": { "internshipId": "1" }, "invalid": ["internshipId"] },
+  { "name": "internship id zero", "input": { "internshipId": 0 }, "invalid": ["internshipId"] },
+  { "name": "several problems at once", "input": { "fullName": "", "email": "nope", "consent": false }, "invalid": ["fullName", "email", "consent"] }
+]

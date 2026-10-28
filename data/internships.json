@@ -1,0 +1,209 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer Intern",
+    "company": "Lumen Labs",
+    "location": "Coimbatore",
+    "mode": "hybrid",
+    "category": "Engineering",
+    "stipend": "₹18,000 / month",
+    "durationWeeks": 12,
+    "description": "Build accessible interface components for a student-facing learning app. You will pair with a senior engineer and ship at least two features to production.",
+    "skills": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git"
+    ],
+    "closesInDays": 24
+  },
+  {
+    "id": 2,
+    "title": "Data Analyst Intern",
+    "company": "Kovai Analytics",
+    "location": "Coimbatore",
+    "mode": "onsite",
+    "category": "Data",
+    "stipend": "₹15,000 / month",
+    "durationWeeks": 10,
+    "description": "Clean survey data, build dashboards, and present weekly findings to the operations team. Comfort with spreadsheets is required.",
+    "skills": [
+      "SQL",
+      "Excel",
+      "Python"
+    ],
+    "closesInDays": 19
+  },
+  {
+    "id": 3,
+    "title": "UX Research Intern",
+    "company": "Pixelwell",
+    "location": "Remote",
+    "mode": "remote",
+    "category": "Design",
+    "stipend": "₹12,000 / month",
+    "durationWeeks": 8,
+    "description": "Plan and run short usability interviews, then turn the notes into clear recommendations for the product designers.",
+    "skills": [
+      "Interviewing",
+      "Figma",
+      "Writing"
+    ],
+    "closesInDays": 34
+  },
+  {
+    "id": 4,
+    "title": "Backend Engineering Intern",
+    "company": "Nilgiri Systems",
+    "location": "Bengaluru",
+    "mode": "hybrid",
+    "category": "Engineering",
+    "stipend": "₹25,000 / month",
+    "durationWeeks": 16,
+    "description": "Help design and test REST endpoints for a logistics platform. You will write integration tests and review database queries.",
+    "skills": [
+      "Node.js",
+      "SQL",
+      "REST",
+      "Testing"
+    ],
+    "closesInDays": 39
+  },
+  {
+    "id": 5,
+    "title": "Content Marketing Intern",
+    "company": "Brightline Media",
+    "location": "Chennai",
+    "mode": "onsite",
+    "category": "Marketing",
+    "stipend": "₹10,000 / month",
+    "durationWeeks": 8,
+    "description": "Draft blog posts and newsletters, research topics with the editors, and track which pieces readers actually finish.",
+    "skills": [
+      "Writing",
+      "SEO",
+      "Research"
+    ],
+    "closesInDays": 29
+  },
+  {
+    "id": 6,
+    "title": "Machine Learning Intern",
+    "company": "Orchard AI",
+    "location": "Remote",
+    "mode": "remote",
+    "category": "Data",
+    "stipend": "₹30,000 / month",
+    "durationWeeks": 14,
+    "description": "Evaluate small language models on support tickets and document where they fail. Expect lots of careful error analysis.",
+    "skills": [
+      "Python",
+      "Statistics",
+      "Evaluation"
+    ],
+    "closesInDays": 44
+  },
+  {
+    "id": 7,
+    "title": "Mobile App Intern",
+    "company": "Tamarind Apps",
+    "location": "Hyderabad",
+    "mode": "hybrid",
+    "category": "Engineering",
+    "stipend": "₹20,000 / month",
+    "durationWeeks": 12,
+    "description": "Implement screens and offline caching for a field-service Android app under the guidance of the mobile lead.",
+    "skills": [
+      "Kotlin",
+      "Android",
+      "REST"
+    ],
+    "closesInDays": 35
+  },
+  {
+    "id": 8,
+    "title": "Operations Intern",
+    "company": "Cartwheel Logistics",
+    "location": "Coimbatore",
+    "mode": "onsite",
+    "category": "Operations",
+    "stipend": "₹9,000 / month",
+    "durationWeeks": 6,
+    "description": "Shadow dispatch coordinators, record delays, and propose small process fixes that the team can try the following week.",
+    "skills": [
+      "Excel",
+      "Communication",
+      "Organisation"
+    ],
+    "closesInDays": 22
+  },
+  {
+    "id": 9,
+    "title": "Cybersecurity Intern",
+    "company": "Fortis Secure",
+    "location": "Remote",
+    "mode": "remote",
+    "category": "Engineering",
+    "stipend": "₹22,000 / month",
+    "durationWeeks": 12,
+    "description": "Assist with dependency audits, write security checklists, and help triage findings from automated scanners.",
+    "skills": [
+      "Networking",
+      "Linux",
+      "Reporting"
+    ],
+    "closesInDays": 49
+  },
+  {
+    "id": 10,
+    "title": "Graphic Design Intern",
+    "company": "Studio Marigold",
+    "location": "Chennai",
+    "mode": "hybrid",
+    "category": "Design",
+    "stipend": "₹11,000 / month",
+    "durationWeeks": 10,
+    "description": "Produce social media graphics and slide templates for a small group of consumer brands, working from a shared style guide.",
+    "skills": [
+      "Figma",
+      "Illustration",
+      "Typography"
+    ],
+    "closesInDays": 73
+  },
+  {
+    "id": 11,
+    "title": "Finance Intern",
+    "company": "Banyan Capital",
+    "location": "Mumbai",
+    "mode": "onsite",
+    "category": "Finance",
+    "stipend": "₹16,000 / month",
+    "durationWeeks": 8,
+    "description": "Reconcile monthly accounts, prepare simple variance reports, and help the controller with audit documents.",
+    "skills": [
+      "Excel",
+      "Accounting",
+      "Attention to detail"
+    ],
+    "closesInDays": 77
+  },
+  {
+    "id": 12,
+    "title": "Full-Stack Intern",
+    "company": "Sprout Health",
+    "location": "Remote",
+    "mode": "remote",
+    "category": "Engineering",
+    "stipend": "₹24,000 / month",
+    "durationWeeks": 16,
+    "description": "Work across a React frontend and a Node API for a clinic booking tool. You will own a small feature from design to deploy.",
+    "skills": [
+      "JavaScript",
+      "Node.js",
+      "SQL",
+      "React"
+    ],
+    "closesInDays": 85
+  }
+]

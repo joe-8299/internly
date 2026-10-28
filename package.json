@@ -1,0 +1,16 @@
+{
+  "name": "pinboard",
+  "version": "2.0.0",
+  "description": "PinBoard: vanilla JS frontend + Node/SQLite backend with validation, rate limiting and secure headers. Zero dependencies.",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "demo:failures": "node --disable-warning=ExperimentalWarning src/server.js --chaos",
+    "test": "node --disable-warning=ExperimentalWarning --test \"tests/**/*.test.js\"",
+    "report": "node scripts/make-report.js",
+    "perf": "node --disable-warning=ExperimentalWarning scripts/perf.js",
+    "qa": "npm run report && npm run perf"
+  }
+}

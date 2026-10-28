@@ -1,0 +1,22 @@
+# Render Blueprint: one click deploy of PinBoard on the free plan.
+# Dashboard: New + > Blueprint > pick this repo. No build step, no dependencies.
+services:
+  - type: web
+    name: pinboard
+    runtime: node
+    plan: free
+    buildCommand: echo "no build step"
+    startCommand: node --disable-warning=ExperimentalWarning src/server.js
+    healthCheckPath: /api/ready
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: HOST
+        value: 0.0.0.0
+      - key: TRUST_PROXY
+        value: "1"
+      - key: DB_FILE
+        value: /tmp/board.sqlite
+      - key: LOG_LEVEL
+        value: info
